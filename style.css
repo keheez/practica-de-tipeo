@@ -1,0 +1,157 @@
+:root {
+   --clr-darkgray: rgb(60, 65, 66);
+   --clr-lightblue: rgba(1, 245, 225, 0.589);
+   --clr-red: rgb(250, 10, 10);
+   --clr-lightcoral: rgb(240, 151, 151);
+   --clr-white: rgb(255, 255, 255);
+   --blue-gradient: linear-gradient(176.29deg, #5bd483 -64.48%, #e2eb6b 100%);
+ }
+ @font-face {
+  font-family: Century_Gothic;
+  src: url(./Fonts/Century_Gothic.ttf);
+}
+body {
+   width: 600px;
+   margin:  10% 25%;
+   background: linear-gradient(90deg, rgba(227, 255, 0, 1) 0%, rgba(13, 209, 136, 1) 50%, rgba(51, 221, 255, 1) 100%);
+   padding: 0 20px 20px 20px;
+ }
+ 
+ .contenido{
+   margin: auto;
+   width: 45%;
+   height: 30%;
+   padding: 9px;
+   background: linear-gradient(90deg, rgba(227, 255, 0, 1) 0%, rgba(13, 209, 136, 1) 50%, rgba(51, 221, 255, 1) 100%);;
+   border-radius: 15px;
+ }
+ 
+ .typing{
+   text-align: center;
+   min-width: 100%;
+   height: 10%;
+   margin: -10px -10px 20px -10px;
+   text-align: center;
+   color: var(--clr-white);
+}
+ .typing input {
+   width: 45%;
+   max-width: 100px;
+   background: transparent;
+   outline: none;
+   padding: 0.5rem 1rem;
+   border-radius: 90px;
+   margin: 1rem 0;
+   font-size: 0.8rem;
+   color: var(--clr-darkgray);
+   cursor: pointer;
+ }
+
+.typing button {
+   background: var(--blue-gradient);
+   width: 160px;
+   padding: 5px 2px;
+   border: none;
+   border-radius: 20px;
+   font-size: 1rem;
+   font-weight: 400;
+   color: var(--clr-white);/* cambiar color*/
+   transform: scale(1);
+   transition: transform 0.3s ease-in-out;
+   margin-bottom: 1rem;
+   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
+   cursor: pointer;
+ }
+ .typing button:active {
+   transform: scale(0.9);
+ }
+
+#quote{
+   text-align: center;
+   font-family: "Poppins", "Sans-Serif";
+   font-weight: bold;
+   color: var(--clr-darkgray);
+} 
+.highlight {
+    background-color: var(--clr-lightblue)
+ }
+
+ .error {
+    background-color: var(--clr-lightcoral);
+    border-color: var(--clr-red);
+ }
+
+/*ventana modal*/
+.modal {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.8);
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	display: flex;
+	
+	animation: modal 1.5s 1s forwards;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.contenido {
+	margin: auto;
+	width: 40%;
+	height: 40%;
+	background: rgba(0, 255, 200,.5);
+	border-radius: 10px;
+}
+
+#cerrar {
+	display: none;
+}
+#cerrar + label {
+	position: fixed;
+	color: rgb(255, 255, 255);
+	font-size: 25px;
+	z-index: 50;
+	background: darkred;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	right: 90px;
+	top: 90px;
+	cursor: pointer;
+	
+	animation: modal 2s 1s forwards;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#cerrar:checked + label, #cerrar:checked ~ .modal {
+	display:none;
+}
+
+@keyframes modal {
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+
+
+
+ /* AGREGAR
+
+ COLORES PARA LOS ENCABEZADOS
+ CAMBIAR EL TAMA;O DE LOS ELEMENTOS
+ CAMBIAR FONDO
+
+ 
+ */
